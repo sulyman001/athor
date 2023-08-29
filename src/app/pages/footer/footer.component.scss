@@ -1,0 +1,68 @@
+$background-color: #FFF;
+.footer{
+  background-color: #EAEEF8;
+  padding: 4rem;
+}
+
+.footer footer{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20rem;
+}
+#footer footer .col-1{
+  flex: 5;
+}
+#footer footer .col-2,
+#footer footer .col-3{
+  flex: 1;
+}
+
+.column-heading{
+  color: #191919;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 140% */
+}
+
+.col-1{
+  p{
+    width: 16rem;
+  }
+}
+
+h2{
+  padding-bottom: 1rem;
+}
+
+.col-1 p{
+  line-height: 1.5rem;
+}
+
+.col-2 li,
+.col-3 li{
+    line-height: 2rem;
+}
+
+
+.input{
+  padding-top: 2rem;
+}
+
+mat-form-field{
+  // background-color: #FFF;
+  height: 5rem;
+  width: 15rem;
+}
+
+.example-button-row{
+  background-color: #7F9CCD;
+  color: #FFF;
+  border-radius: .5rem;
+  width: 7rem;
+  height: 3rem;
+
+}
+

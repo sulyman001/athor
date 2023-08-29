@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+$color_1: #ffffff;
+$color_2: #101010;
+$background-color_1: #7234F5;
+$background-color_2: #101010;
+$background-color_3: #FFE6C4;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	// opacity: 0.8;
+  height: 4rem;
+  background-color: #fff;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+  color: $color_2;
+}
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 5rem;
+}
+.navbar > div:last-child{
+  margin-left: 12rem;
+}
+.hamburger {
+	display: none;
+}
+.bar {
+	display: block;
+	width: 1.563rem;
+	height: 0.188rem;
+	margin: 0.313rem auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: $background-color_2;
+}
+.nav-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 6.25rem;
+}
+.nav-item {
+	margin-right: 3.125rem;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.188rem;
+	&:hover {
+		opacity: 0.4;
+	}
+}
+
+
+.nav-logo {
+	margin: 1.563rem 1.563rem 1.563rem 3.125rem;
+	cursor: pointer;
+	outline: none;
+}
+@media only screen and (max-width: 1413px) {
+	.nav-menu {
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width: 1313px) {
+	.nav-menu {
+		position: fixed;
+		left: -100%;
+		top: 5rem;
+		flex-direction: column;
+		background-color: $background-color_1;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+		box-shadow: 0 0.625rem 1.688rem rgba(0, 0, 0, 0.05);
+	}
+	.nav-menu.active {
+		left: 0;
+	}
+	.nav-item {
+		margin: 2.5rem 0;
+	}
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+	.hamburger.active {
+		.bar {
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(1) {
+				-webkit-transform: translateY(8px) rotate(45deg);
+				transform: translateY(8px) rotate(45deg);
+			}
+			&:nth-child(3) {
+				-webkit-transform: translateY(-8px) rotate(-45deg);
+				transform: translateY(-8px) rotate(-45deg);
+			}
+		}
+	}
+}
